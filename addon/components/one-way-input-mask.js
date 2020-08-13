@@ -199,6 +199,8 @@ const OneWayInputMask = Component.extend({
    */
   _syncValue() {
     let actualValue = this._value;
+    if (actualValue===null || actualValue===undefined)
+      actualValue = '';
     let renderedValue = this.element.value;
 
     if (actualValue !== renderedValue) {
